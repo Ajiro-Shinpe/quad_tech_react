@@ -1,0 +1,137 @@
+.contact-container {
+  background-color: #111;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+h2, h4 {
+  color: rgb(210, 45, 10);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-text {
+  color: #ddd;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.contact-content {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(210, 45, 10, 0.1);
+}
+
+.contact-form .form-control {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.contact-form .form-control:focus {
+  background-color: #333;
+  border-color: rgb(210, 45, 10);
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(210, 45, 10, 0.25);
+}
+
+.contact-form label {
+  color: #aaa;
+}
+
+.submit-btn {
+  background-color: transparent;
+  color: rgb(210, 45, 10);
+  border: 2px solid rgb(210, 45, 10);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: rgb(210, 45, 10);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  padding-left: 3rem;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.contact-icon {
+  margin-right: 1rem;
+  color: rgb(210, 45, 10);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+}
+
+.instagram { background-color: #E1306C; }
+.linkedin { background-color: #0077B5; }
+.twitter { background-color: #1DA1F2; }
+.facebook { background-color: #4267B2; }
+
+.business-hours p {
+  text-align: left;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    padding-left: 0;
+    margin-top: 3rem;
+  }
+  
+  .contact-details p,
+  .business-hours p {
+    text-align: center;
+    justify-content: center;
+  }
+}
