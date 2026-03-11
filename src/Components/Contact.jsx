@@ -78,7 +78,7 @@ export default function Contact() {
               </p>
               <p>
                 <i className="fas fa-phone-alt contact-icon"></i>
-                <span>+92 335 0002183</span>
+                <span>+92 336 3272704</span>
               </p>
               <p>
                 <i className="fas fa-envelope contact-icon"></i>

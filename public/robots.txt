@@ -1,3 +1,19 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+
+Crawl-delay: 10
+
+Sitemap: https://quadtechdevelopers.netlify.app/sitemap.xml
+
+# Google-specific directives
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+
+# Bing-specific directives
+User-agent: bingbot
+Allow: /
+Disallow: /private/

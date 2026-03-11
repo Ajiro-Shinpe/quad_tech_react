@@ -6,9 +6,9 @@ export default function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            Quad Tech Developers
-          </a>
+          <Link className="navbar-brand" to="/">
+            <img src="./logo.png" className='img img-fluid' alt="Quad Tech Logo" />
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -40,6 +40,11 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link" to="/pricing">
                   Pricing
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/portfolio">
+                  Portfolio
                 </Link>
               </li>
             </ul>

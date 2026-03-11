@@ -6,7 +6,8 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h2>QuadTech</h2>
+            {/* <h2>QuadTech</h2> */}
+            <img src="./logo.png" className='img img-fluid' alt="Quad Tech Logo" />
             <p className="footer-description">
               Innovating the Future, One Solution at a Time
             </p>
@@ -39,7 +40,7 @@ export default function Footer() {
               <i className="bi bi-linkedin" />
             </a>
             <a
-              href="https://wa.me/923350002183"
+              href="https://wa.me/923363272704"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Contact us on WhatsApp"

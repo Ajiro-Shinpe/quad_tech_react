@@ -6,11 +6,14 @@ export default function Services() {
     {
       id: 1,
       title: "Web Development",
-      description: "Complete website solutions from simple landing pages to complex corporate sites.",
+      description: "Complete website and web application solutions from simple landing pages to complex corporate sites and interactive web applications.",
       features: [
         "Custom responsive website design",
-        "Frontend development (HTML, CSS, JavaScript)",
-        "Basic backend functionality",
+        "Web application development",
+        "User authentication systems",
+        "Database integration",
+        "API development",
+        "Admin dashboard creation",
         "SEO-friendly structure",
         "Cross-browser compatibility"
       ],
@@ -18,19 +21,6 @@ export default function Services() {
     },
     {
       id: 2,
-      title: "Web App Development",
-      description: "Interactive web applications with advanced functionality and databases.",
-      features: [
-        "Custom web application development",
-        "User authentication systems",
-        "Database integration",
-        "API development",
-        "Admin dashboard creation"
-      ],
-      icon: "🌐"
-    },
-    {
-      id: 3,
       title: "WordPress Development",
       description: "Flexible and scalable WordPress solutions for content-driven websites.",
       features: [
@@ -40,46 +30,37 @@ export default function Services() {
         "Headless CMS integrations",
         "Speed & performance optimization"
       ],
-      icon: "🖥️"
+      icon: "🔧"
+    },
+    {
+      id: 3,
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android devices.",
+      features: [
+        "Native iOS app development",
+        "Native Android app development",
+        "Cross-platform development (React Native, Flutter)",
+        "Mobile UI/UX design",
+        "App store deployment",
+        "Push notifications",
+        "Offline functionality"
+      ],
+      icon: "📱"
     },
     {
       id: 4,
-      title: "UI/UX Design",
-      description: "Intuitive and engaging user interface and experience design.",
+      title: "Desktop App Development",
+      description: "Cross-platform desktop applications for Windows, macOS, and Linux operating systems.",
       features: [
-        "User journey mapping",
-        "Wireframes & prototypes",
-        "Interactive UI design",
-        "Design systems & guidelines",
-        "Accessibility standards (WCAG)"
+        "Windows desktop applications",
+        "macOS desktop applications",
+        "Cross-platform desktop apps",
+        "Tauri/Electron-based applications",
+        "Native performance optimization",
+        "System integration",
+        "Offline-first architecture"
       ],
-      icon: "🎨"
-    },
-    {
-      id: 5,
-      title: "Graphic Design",
-      description: "Creative visuals that build strong brand identity and attract attention.",
-      features: [
-        "Logo design & branding kits",
-        "Business cards & letterheads",
-        "Social media designs",
-        "Packaging & box design",
-        "Posters & flyers"
-      ],
-      icon: "✏️"
-    },
-    {
-      id: 6,
-      title: "SEO Services",
-      description: "Comprehensive SEO strategies to drive traffic and improve rankings.",
-      features: [
-        "Keyword research & planning",
-        "On-page & off-page SEO",
-        "Technical site audits",
-        "Content planning & optimization",
-        "High-quality backlink building"
-      ],
-      icon: "🔍"
+      icon: "🖥️"
     }
   ];
     

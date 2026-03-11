@@ -8,6 +8,7 @@ import Services from './Components/Services';
 import Pricing from './Components/Pricing';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import Portfolio from './Components/Portfolio';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import LocomotiveScroll from 'locomotive-scroll';
@@ -21,50 +22,46 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    if (!containerRef.current) {
-      console.error("Container ref is not set");
-      return;
-    }
+    if (!containerRef.current) return;
 
-    console.log("Initializing Locomotive Scroll");
+    // Initialize Locomotive Scroll
     const locoScroll = new LocomotiveScroll({
       el: containerRef.current,
       smooth: true,
-      lerp: 0.15,
-      multiplier: 0.8,
-      inertia: 0.9,
-      touchMultiplier: 1.5,
-      firefoxMultiplier: 35,
-      scrollFromAnywhere: true,
+      lerp: 0.1,
+      multiplier: 1,
+      inertia: 0.7,
+      touchMultiplier: 2,
+      firefoxMultiplier: 50,
+      chromeMultiplier: 1,
+      safariMultiplier: 1.2,
+      edgeMultiplier: 1,
+      scrollFromAnywhere: false,
       smoothMobile: true,
-      smartphone: {
-        smooth: true,
-        breakpoint: 768,
-        lerp: 0.2,
-        inertia: 0.85,
-      },
-      tablet: {
-        smooth: true,
-        breakpoint: 1024,
-        lerp: 0.18,
-        inertia: 0.88,
-      },
       getDirection: true,
       getSpeed: true,
       resetNativeScroll: true,
       reloadOnContextChange: true,
+      smartphone: {
+        smooth: true,
+        breakpoint: 768,
+        lerp: 0.15,
+        inertia: 0.7
+      },
+      tablet: {
+        smooth: true,
+        breakpoint: 1024,
+        lerp: 0.12,
+        inertia: 0.7
+      }
     });
 
     locoScrollRef.current = locoScroll;
 
-    locoScroll.on("scroll", (args) => {
-      console.log("Scroll position:", args.scroll.y, "Limit:", args.limit.y);
-      ScrollTrigger.update();
-    });
-
+    // Setup GSAP ScrollTrigger
     ScrollTrigger.scrollerProxy(containerRef.current, {
       scrollTop(value) {
-        return arguments.length
+        return arguments.length 
           ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
           : locoScroll.scroll.instance.scroll.y;
       },
@@ -73,38 +70,57 @@ function App() {
           top: 0,
           left: 0,
           width: window.innerWidth,
-          height: window.innerHeight,
+          height: window.innerHeight
         };
       },
-      pinType: containerRef.current.style.transform ? "transform" : "fixed",
+      pinType: containerRef.current.style.transform ? "transform" : "fixed"
     });
 
-    const timeoutId = setTimeout(() => {
-      locoScroll.update();
-      ScrollTrigger.refresh();
-      console.log("Locomotive Scroll updated");
-    }, 500);
-
-    const handleResize = () => {
+    // Update on resize
+    const onResize = () => {
       locoScroll.update();
       ScrollTrigger.refresh();
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', onResize);
 
+    // Cleanup
     return () => {
-      clearTimeout(timeoutId);
-      locoScroll.destroy();
-      ScrollTrigger.removeEventListener("refresh", () => locoScroll.update());
-      window.removeEventListener("resize", handleResize);
+      if (locoScrollRef.current) {
+        locoScrollRef.current.destroy();
+        locoScrollRef.current = null;
+      }
+      window.removeEventListener('resize', onResize);
+      ScrollTrigger.clearMatchMedia();
+      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 
   useEffect(() => {
     if (locoScrollRef.current) {
-      console.log("Resetting scroll to top for route:", location.pathname);
-      locoScrollRef.current.scrollTo(0, { immediate: true });
+      // Add small timeout to ensure DOM is ready
+      setTimeout(() => {
+        locoScrollRef.current.scrollTo(0, { 
+          duration: 0,
+          disableLerp: true,
+          immediate: true
+        });
+        locoScrollRef.current.update();
+      }, 50);
     }
   }, [location]);
+
+  // Add resize handler for better cross-device support
+  useEffect(() => {
+    const handleResize = () => {
+      if (locoScrollRef.current) {
+        locoScrollRef.current.update();
+        ScrollTrigger.refresh();
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useGSAP(() => {
     // Add GSAP animations here if needed
@@ -125,6 +141,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
       <Footer />
     </div>

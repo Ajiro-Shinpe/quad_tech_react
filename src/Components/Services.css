@@ -30,14 +30,14 @@
   }
   
   /* Services Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 60px 8rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 60px 8rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
   
   /* Service Cards */
   .service-card {
@@ -147,12 +147,20 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 1200px) {
-    .services-header,
-    .services-grid {
-      padding: 60px 4rem;
-    }
+@media (max-width: 1200px) {
+  .services-header,
+  .services-grid {
+    padding: 60px 4rem;
   }
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 50px 3rem;
+  }
+}
   
   @media (max-width: 768px) {
     .services-header {
@@ -170,6 +178,7 @@
     .services-grid {
       padding: 40px 2rem;
       grid-template-columns: 1fr;
+      gap: 20px;
     }
   }
   

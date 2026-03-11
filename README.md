@@ -10,3 +10,6 @@ npm install
 npm install --force
 
 npm start
+
+# for production
+npm run build

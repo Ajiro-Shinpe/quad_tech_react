@@ -5,21 +5,23 @@ export default function Pricing() {
   const services = [
     {
       id: 1,
-      name: 'Website Development',
+      name: 'Web Development',
       title: "Web Development",
-      description: 'Professional websites tailored to your business needs',
+      description: 'Professional websites and web applications tailored to your business needs',
       features: [
         "Mobile-responsive design",
         "SEO-friendly structure",
-        "Fast loading speeds",
-        "Contact forms integration",
-        "Social media integration"
+        "User authentication",
+        "Database integration",
+        "Admin dashboard",
+        "API integrations",
+        "Cloud deployment"
       ],
       icon: "💻",
       plans: [
         {
           name: 'Starter',
-          price: 90,
+          price: 99,
           duration: 'one-time',
           bestFor: 'Small businesses & startups',
           features: [
@@ -33,7 +35,7 @@ export default function Pricing() {
         },
         {
           name: 'Business',
-          price: 250,
+          price: 339,
           duration: 'one-time',
           popular: true,
           bestFor: 'Growing businesses',
@@ -41,7 +43,8 @@ export default function Pricing() {
             '5-page custom website',
             'Advanced contact forms',
             'Custom CMS integration',
-            'Basic SEO setup',
+            'Basic web app features',
+            'Database integration',
             '3 revision rounds',
             '16 Days delivery',
             '3 months support'
@@ -49,14 +52,17 @@ export default function Pricing() {
         },
         {
           name: 'Enterprise',
-          price: 540,
+          price: 1049,
           duration: 'one-time',
-          bestFor: 'Large businesses & e-commerce',
+          bestFor: 'Large businesses & complex apps',
           features: [
             '10-page custom website',
-            'E-commerce functionality',
-            'Advanced SEO optimization',
-            'Custom animations',
+            'Full web application',
+            'Advanced web app features',
+            'User authentication',
+            'Admin dashboard',
+            'API development',
+            'Cloud deployment',
             'Unlimited revisions',
             '25 Days delivery',
             '6 months support'
@@ -66,58 +72,61 @@ export default function Pricing() {
     },
     {
       id: 2,
-      name: 'Web Application',
-      title: "Web App Development",
-      description: 'Custom web applications with advanced functionality',
+      name: 'Mobile App Development',
+      title: "Mobile App Development",
+      description: 'Native and cross-platform mobile applications for iOS and Android',
       features: [
-        "User authentication",
-        "Database integration",
-        "Admin dashboard",
-        "API integrations",
-        "Cloud deployment"
+        "Native iOS app development",
+        "Native Android app development",
+        "Cross-platform development",
+        "Mobile UI/UX design",
+        "App store deployment"
       ],
-      icon: "🌐",
+      icon: "📱",
       plans: [
         {
           name: 'Basic',
-          price: 20000,
+          price: 170,
           duration: 'one-time',
-          bestFor: 'MVP or small applications',
+          bestFor: 'Simple mobile apps',
           features: [
-            'Single-page application',
-            'Basic CRUD operations',
-            'Simple UI design',
-            '7 Days delivery',
+            'Single platform (iOS or Android)',
+            'Basic UI design',
+            'Simple functionality',
+            'App store submission',
+            '14 Days delivery',
             '1 month support'
           ]
         },
         {
           name: 'Professional',
-          price: 35000,
+          price: 429,
           duration: 'one-time',
           popular: true,
-          bestFor: 'Business applications',
+          bestFor: 'Business mobile apps',
           features: [
-            'Multi-page application',
+            'Cross-platform (iOS & Android)',
+            'Custom UI/UX design',
             'User authentication',
             'Database integration',
-            'Admin dashboard',
-            '15 Days delivery',
+            'Push notifications',
+            '21 Days delivery',
             '3 months support'
           ]
         },
         {
-          name: 'Custom',
-          price: 60000,
+          name: 'Enterprise',
+          price: 1200,
           duration: 'one-time',
-          bestFor: 'Complex enterprise solutions',
+          bestFor: 'Complex mobile solutions',
           features: [
-            'Full custom development',
-            'Advanced security features',
+            'Advanced cross-platform app',
+            'Custom animations',
+            'Offline functionality',
+            'Advanced security',
             'API integrations',
-            'Cloud deployment',
-            'Custom reporting',
-            '22 Days development',
+            'App store optimization',
+            '30 Days delivery',
             '6 months support'
           ]
         }
@@ -125,6 +134,68 @@ export default function Pricing() {
     },
     {
       id: 3,
+      name: 'Desktop App Development',
+      title: "Desktop App Development",
+      description: 'Native and cross-platform Desktop applications for Windows,macOS and Linux',
+      features: [
+        "Native Windows app development",
+        "Native macOS app development",
+        "Native Linux app development",
+        "Cross-platform development",
+        "Desktop UI/UX design",
+        "Installation package"
+      ],
+      plans: [
+        {
+          name: 'Basic',
+          price: 120,
+          duration: 'one-time',
+          bestFor: 'Simple desktop tools',
+          features: [
+            'Single platform (Windows, macOS, or Linux)',
+            'Basic UI design',
+            'Core functionality',
+            'Installation package',
+            '10 Days delivery',
+            '1 month support'
+          ]
+        },
+        {
+          name: 'Professional',
+          price: 349,
+          duration: 'one-time',
+          popular: true,
+          bestFor: 'Business desktop applications',
+          features: [
+            'Cross-platform (Windows, macOS, Linux)',
+            'Professional UI design',
+            'Database integration',
+            'File system integration',
+            'Auto-updater',
+            '18 Days delivery',
+            '3 months support'
+          ]
+        },
+        {
+          name: 'Enterprise',
+          price: 749,
+          duration: 'one-time',
+          bestFor: 'Complex desktop solutions',
+          features: [
+            'Advanced cross-platform app',
+            'Custom UI/UX design',
+            'Advanced system integration',
+            'Offline-first architecture',
+            'Performance optimization',
+            'Custom licensing system',
+            '25 Days delivery',
+            '6 months support'
+          ]
+        }
+      ]
+    },
+    {
+      id: 4,
       name: 'WordPress',
       title: "WordPress Development",
       description: 'Professional WordPress websites and online stores',
@@ -139,7 +210,7 @@ export default function Pricing() {
       plans: [
         {
           name: 'Basic',
-          price: 20000,
+          price: 99,
           duration: 'one-time',
           bestFor: 'Blogs & small business sites',
           features: [
@@ -152,7 +223,7 @@ export default function Pricing() {
         },
         {
           name: 'Business',
-          price: 30000,
+          price: 299,
           duration: 'one-time',
           popular: true,
           bestFor: 'Online stores & business sites',
@@ -167,7 +238,7 @@ export default function Pricing() {
         },
         {
           name: 'Enterprise',
-          price: 65000,
+          price: 649,
           duration: 'one-time',
           bestFor: 'Large e-commerce sites',
           features: [
@@ -177,174 +248,6 @@ export default function Pricing() {
             'Multilingual support',
             '22 Days delivery',
             '3 months support'
-          ]
-        }
-      ]
-    },
-    {
-      id: 4,
-      name: 'UI/UX Design',
-      title: "UI/UX Design",
-      description: 'Beautiful and functional user interfaces',
-      features: [
-        "User research",
-        "Wireframing",
-        "Prototyping",
-        "UI design",
-        "Design systems"
-      ],
-      icon: "🎨",
-      plans: [
-        {
-          name: 'Basic',
-          price: 6000,
-          duration: 'project',
-          bestFor: 'Startups & MVPs',
-          features: [
-            '3 screen designs',
-            'Basic wireframes',
-            '1 revision round',
-            '6 Days delivery'
-          ]
-        },
-        {
-          name: 'Professional',
-          price: 14000,
-          duration: 'project',
-          popular: true,
-          bestFor: 'Web & mobile apps',
-          features: [
-            '10+ screen designs',
-            'Interactive prototype',
-            'Style guide',
-            '3 revision rounds',
-            '14 Days delivery'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 25000,
-          duration: 'project',
-          bestFor: 'Complex applications',
-          features: [
-            'Complete design system',
-            'User testing included',
-            'Animation prototypes',
-            'Unlimited revisions',
-            'Brand guidelines',
-            '20 Days delivery'
-          ]
-        }
-      ]
-    },
-    {
-      id: 5,
-      name: 'Graphic Design',
-      title: "Graphic Design",
-      description: 'Professional branding and marketing materials',
-      features: [
-        "Logo design",
-        "Brand identity",
-        "Print materials",
-        "Social media graphics",
-        "Packaging design"
-      ],
-      icon: "✏️",
-      plans: [
-        {
-          name: 'Starter',
-          price: 5000,
-          duration: 'one-time',
-          bestFor: 'Startups & small businesses',
-          features: [
-            '2 logo concepts',
-            '1 revision',
-            'Basic brand colors',
-            '3 days delivery'
-          ]
-        },
-        {
-          name: 'Brand Kit',
-          price: 8000,
-          duration: 'one-time',
-          popular: true,
-          bestFor: 'Established businesses',
-          features: [
-            '5 logo concepts',
-            'Full brand identity',
-            'Business cards',
-            'Social media kit',
-            '6 Days delivery'
-          ]
-        },
-        {
-          name: 'Complete Branding',
-          price: 15000,
-          duration: 'one-time',
-          bestFor: 'Businesses needing full branding',
-          features: [
-            '15 logo concepts',
-            'Print materials',
-            'Packaging design',
-            'Brand guidelines',
-            'Stationery design',
-            '18 Days delivery'
-          ]
-        }
-      ]
-    },
-    {
-      id: 6,
-      name: 'SEO',
-      title: "SEO Services",
-      description: 'Improve your search rankings and organic traffic',
-      features: [
-        "Keyword research",
-        "On-page optimization",
-        "Content strategy",
-        "Link building"
-      ],
-      icon: "🔍",
-      plans: [
-        {
-          name: 'Starter',
-          price: 14000,
-          duration: 'month',
-          bestFor: 'New websites',
-          features: [
-            'Keyword research',
-            'Basic on-page SEO',
-            'Monthly report',
-            '5 backlinks/month'
-          ]
-        },
-        {
-          name: 'Growth',
-          price: 20000,
-          duration: 'month',
-          popular: true,
-          bestFor: 'Businesses wanting more traffic',
-          features: [
-            'Advanced on-page SEO',
-            'Technical SEO audit',
-            'Content optimization',
-            '15 backlinks/month',
-            'Weekly reports'
-          ]
-        },
-        {
-          name: 'Enterprise',
-          price: 35000,
-          duration: 'month',
-          bestFor: 'E-commerce & competitive niches',
-          features: [
-            'Comprehensive SEO strategy',
-            'E-commerce SEO',
-            'Local SEO',
-            '30+ backlinks/month',
-            'Weekly monitoring',
-            'Priority support'
-            
           ]
         }
       ]
